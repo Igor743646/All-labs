@@ -1,0 +1,26 @@
+--- A2.txt	2020-02-15 21:51:11.792997995 +0300
++++ A3.txt	2020-02-15 21:54:40.771618920 +0300
+@@ -1,14 +1,14 @@
+ apple
+-BMW
+-BMW
++bMw
+ cow
+-dir
+-direct
+-dirt
++dirdir
++dirr
+ Dub
+-dubb
+-dUbb
+-mouse
+-orange
++Dublin
++join
++join23
++quit
++red
++Red
+ stand
+ tar

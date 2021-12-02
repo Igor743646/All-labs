@@ -1,0 +1,86 @@
+\documentclass[a4paper, twoside]{article}
+\usepackage{layout}
+\usepackage[textheight= 24cm, textwidth=17 cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,greek,russian]{babel}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{upgreek}
+\setcounter{page}{52}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LE,RO]{\large \thepage}
+\fancyhead[CE]{\large\textit{С. Виноград}}
+\fancyhead[CO]{\large\textit{О времени, требующемся для выполнения сложения}}
+\fancyfoot{}
+\marginparwidth=90cm
+\headheight=20pt
+\footskip=-1cm
+\begin{document}
+\voffset=0.57cm
+
+\Large 
+
+\begin{spacing}{0.9}
+\noindent мы можем построить \textit{m} схем, каждая из которых вычисляет\linebreak[4] $\upvarphi$$_{i}$: $G_{i}$$\times$$G_{i}$$\rightarrow$$G_{i}$ и требует количество времени 
+\Large $\uptau_{i}$ = 2 +\linebreak[4] $+ \left] \text{log}_{\left[\frac{r+1}{2}\right]}\frac{1}{\left[\frac{r}{2}\right]}\left]\text{log}_{d}|G_{i}|\right[ \right[$ \Large для вычисления этой функции.\linebreak[4] Так что вся схема может может вычислить свою функцию за время 
+
+\[
+ \uptau = \underset{1<=i<=m}{\text{max}}  \uptau _{i} = 2 + \left] \text{log}_{\left[\frac{r+1}{2}\right]}\frac{1}{\left[\frac{r}{2}\right]}\left]\text{log}_{d}\alpha(G)\right[ \right[.
+\]
+
+\noindent (Идея доказатеьства здесь та же, что в [3].)
+\end{spacing}
+
+\begin{spacing}{0.9}
+\par Сравнение теоремы 2 с теоремой 1 показывает, что с ростом\linebreak[4] r время, требующееся для вычисления $\upvarphi$: \textit{G}$\times$\textit{G}$\rightarrow$\textit{G}, для ко-\linebreak[4] нечной абелевой группы приближается к нижней оценке. Более\linebreak[4] точно, пусть $\uptau_{\texttt{act}}$ обозначает время, полученное в теореме 2,\linebreak[4] а $\uptau_{\texttt{min}}$ обозначает нижнюю оценку, полученную в теореме 1;\linebreak[4] тогда \\
+$\uptau_{\text{act}} = 2 + \left] \log_{\left[\frac{r+1}{2}\right]}\frac{1}{\left[\frac{r}{2}\right]}\left]\log_{d}\alpha(G)\right[ \right[ \approx$
+\[
+  \begin{gathered}
+ \approx 2 + \text{log}_{\left[\frac{r+1}{2}\right]}\frac{1}{\left[\frac{r}{2}\right]}\left]\text{log}_{d}\alpha(G)\right[ \approx \\
+ \approx 2 - \text{log}_{\left[\frac{r+1}{2}\right]}\left[\frac{r}{2}\right]+\left]\text{log}_{r}\text{log}_{d}\alpha(G)\right[\text{log}_{\left[\frac{r+1}{2}\right]}r.
+ \end{gathered}
+\]
+\end{spacing}
+
+\begin{spacing}{0.9}
+Итак, для достаточно больших r, таких, что $\text{log}_{\left[\frac{r+1}{2}\right]}\left[\frac{r}{2}\right]$ $\approx$ 1\linebreak[4] и $\text{log}_{\left[\frac{r+1}{2}\right]}r$ $\approx$ 1, мы получаем $\uptau_{\text{act}} \approx \uptau_{\text{min}} + 1$. 
+\end{spacing}
+
+\begin{center}
+\large\textbf{5. ОБСУЖДЕНИЕ}
+\end{center}
+
+\begin{spacing}{0.9}
+\par В разд. 3 мы видели, что нижняя оценка времени, требуе-\linebreak[4]мого для вычисления групповой операции, для конечной груп-\linebreak[4]пы \textit{G} зависит от логарифма логарифма порядка некоторой\linebreak[4] \textit{p}-подгруппы группы \textit{G}. В случае, когда \textit{G} - абелева группа\linebreak[4] (и, в частности если \textit{G} есть $Z_{\upmu}$, где групповой операцией яв-\linebreak[4]ляется сложение по модолю $\upmu$), эта \textit{p}-подгруппа представляет\linebreak[4] собой наибольшую циклическую подгруппу, порядок которой\linebreak[4] есть степень простого. В разд. 4 мы видели, что к этой нижней\linebreak[4] оценке можно приблизиться, если число входных линий логи-\linebreak[4]ческих элементов, используемых для построения схемы, увели-\linebreak[4]чивается.
+\end{spacing}
+
+\begin{spacing}{0.9}
+\par Эти результаты зависят от конкретного определения поня-\linebreak[4]тия <<логическая схема \textit{C} способна вычислить функцию $\upvarphi$>>. \linebreak[4]
+\end{spacing}
+
+%\newpage
+
+\begin{spacing}{0.85}
+\noindent В нашем определении мы потребовали, чтобы входы схемы\linebreak[4] были разделены на классы и каждый класс соответствовал\linebreak[4] одному аргументу вычисляемой функции. Это было сделано для\linebreak[4] того, чтобы функция $\upvarphi$ действительно вычислялась схемой, а\linebreak[4] для этого входы должны нести информацию только об аргу-\linebreak[4]ментах, но не о способе их комбинирования для получения\linebreak[4] результата. Читатель легко убедиться в том, что если бы мы\linebreak[4] заменили требование, наложенное на $g_{i}$ в определении 3, тре-\linebreak[4]бованием существования \textit{g$_{j}$$'$}: $I_{\textit{c, j}}'$$\subset$$I_{\textit{c, j}}$$\longrightarrow$$X_{j}$, то мы получили\linebreak[4] бы эквивалентное определение. 
+\end{spacing}
+
+\begin{spacing}{0.9}
+\par Требование существования функции \textit{h}: \textit{Y}$\rightarrow$$O_{c}$ эквивалентно\linebreak[4] требованию существования \textit{h$'$}: $O_{c}'$$\subset$$O_{c}$$\overset{1:1}{\longrightarrow}$$Y$. Целью тре-\linebreak[4]бования 1:1 для $h'$ было устранить возможность того, чтобы\linebreak[4] выходы несли в точности ту же самую информацию, что и\linebreak[4] входы, и чтобы функция $h'$ <<действительно>> выполняла вычис-\linebreak[4]ление. Разумеется, возможны и другие определения понятия\linebreak[4] вычисления, которые еще соответствуют нашим интуитивным\linebreak[4] представлениям. В [4] описана схема сложения, в которой тре-\linebreak[4]бование, наложенное на $h'$, ослаблено, а именно взамен по-\linebreak[4]требовано, чтобы один и тот же код использовался как для\linebreak[4] кодирования каждого из слагаемых, так и для кодирования\linebreak[4] результата.
+\end{spacing}
+
+\begin{spacing}{0.9}
+\par Другой чертой определения 3 является фиксированное вре-\linebreak[4]мя $\uptau$, через которое обследуется выход. Другой подход состоит\linebreak[4] в том, чтобы рассматривать время <<установления>> схем, кото-\linebreak[4]рое, конечно, зависит от конкретных значений, принимаемых\linebreak[4] аргументами, и затем считать среднее время <<установления>>\linebreak[4] схемы временем вычисления (см. [5]). Предполагается, что\linebreak[4] это среднее время имеет тот же самый порядок, что и ниж-\linebreak[4]няя оценка, однако доказать это предположение нам не уда-\linebreak[4]лось.
+\end{spacing}
+
+\begin{spacing}{0.9}
+\par Другое направление исследования состоит в рассмотрении\linebreak[4] обоих параметров --- и времени вычисления и числа логических\linebreak[4] элементов, требующихся для построения схемы (см. [1]). Этот\linebreak[4] подход можно даже соединить с ослаблением допущения о том,\linebreak[4] что входы несут всю информацию об аргументах в момент\linebreak[4] времени $\uptau$=0, разрешив подавать входы в схему <<последова-\linebreak[4]тельно>>. 
+\end{spacing}
+
+\begin{spacing}{0.9}
+\par \textit{Благодарности.} Автор благодарен М. О. Рабину за предло-\linebreak[4]жение задачи о времени вычисления сложения при ограниче-\linebreak[4]нии, что компоненты имеют \textit{r} входов, а также за постанов-\linebreak[4]ку вопроса о том, может ли быть это время улучшено,\linebreak[4] если не пользоваться позиционным представлением чисел. 
+\end{spacing}
+
+\end{document}
